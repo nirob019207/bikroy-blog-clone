@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Sticky Navbar Example</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">    
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="./icon/css/all.min.css">
+    
+</head>
+<body class="container-lg">
+    <div class="bg-head d-none d-lg-block">
+        <div class="container-fluid d-flex justify-content-between align-items-center ">
+            <div class="px-5 py-2">
+                <img src="./assets/bikroylogo.PNG" alt="">
+            </div>
+            <div class="px-5 py-4">
+                <button class="head-btn px-4 py-1 border-0 rounded-3 text-white">Post Your Ad</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="sticky-lg-top fixed-top bg-head">
+        <nav class="navbar bg-head2  py-3">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+              <div>
+                <div class="px-2 py-2 d-block d-lg-none">
+                    <img src="./assets/bikroylogo.PNG" style="width: 100px;" alt="">
+                </div>
+                <ul class="navbar-nav d-flex flex-row gap-3 align-items-center d-none d-lg-flex">
+                    <li class="nav-item"><a class="nav-link text-light" href="#">Tips & Guide</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#">Top & Best</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#">News Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#">Bikroy Update</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#">More</a></li>
+                </ul>
+              </div>
+              <div>
+                <ul class="navbar-nav d-block d-lg-none">
+                    <li>  <a href="javascript:void(0)" class="closebtn text-white" onclick="openSidebar()"><i class="fas fa-bars"></i>
+                        </a></li>
+                </ul>
+                <ul class="navbar-nav flex-row gap-2 align-items-center text-white d-none d-lg-flex">
+                    <li><i class="fas fa-user"></i> Follow</li>
+                    <li>
+                        <div class="position-relative">
+                            <input type="text" class="border-0 bg-transparent text-white" placeholder="Search" onfocus="this.classList.remove('text-white')" onblur="this.classList.add('text-white')">
+                            <i class="fas fa-search position-absolute top-50 end-0 translate-middle-y text-white"></i>
+                            <i class="fas fa-times position-absolute top-50 end-0 translate-middle-y text-white d-none" id="closeIcon" onclick="clearSearch()"></i>
+                        </div>
+                    </li>
+                </ul>
+                
+              
+                
+              
+                
+              </div>
+            </div>
+        </nav>
+    </div>
+    
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn text-white" onclick="closeSidebar()"><i class="fas fa-times"></i></a>
+        <ul class="navbar-nav flex-column align-items-start mt-5 pt-5 mx-5">
+            <li class="nav-item"><a class="nav-link text-light" href="#">Tips & Guide</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="#">Top & Best</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="#">News Reviews</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="#">Bikroy Update</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="#">More</a></li>
+        </ul>
+    </div>
+
+  
+    <section class="hero-section">
+        <div class="row row-custom">
+            <!-- Big Photo Column -->
+            <div class="col-md-6 col-12 ">
+                <div class="bigc shadow-lg cardd">
+                    <img src="assets/1.jpeg" alt="Big Photo" class="big-photo">
+                    <div class="intro1 container-fluid">
+                        <h3 class="text-white">Boost Your Ads for Better Results with Bikroy’s Latest Feature</h3>
+                        <p>At Bikroy, we’re always working to make our platform better and easier for you to use.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Small Photos Column -->
+            <div class="col-md-6 col-12 d-flex cardd flex-md-column flex-row">
+                <div class="smallc position-relative">
+                    <img src="assets/2.jpeg" alt="Small Photo 1" class="small-photo1 mb-2">
+                    <h1>2024 Infographic: Livestock Market in Bangladesh</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, in.</p>
+                   
+                </div>
+                <div class="smallc position-relative">
+                    <img src="assets/1.jpeg" alt="Small Photo 2" class="small-photo1">
+                    <h1>2024 Infographic: Livestock Market in Bangladesh</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, in.</p>
+
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div >
+           
+            <div class="container position-relative " id="content" >
+                <div class="row h-100 mt-5">
+                    <main class="col py-5">
+                        <div class="row position-relative">
+                            <div class="col">
+                                <ul class="nav nav-tabs small" role="tablist">
+                                    <li class="nav-item"><a class="nav-link text-uppercase active" data-toggle="tab" href="#tab1" role="tab">Home</a></li>
+                                    <li class="nav-item ml-auto"><a class="nav-link text-uppercase" data-toggle="tab" href="#tab2" role="tab">List</a></li>
+                                    <li class="nav-item"><a class="nav-link text-uppercase" data-toggle="tab" href="#tab3" role="tab">More</a></li>
+                                </ul>
+                                <div class="tab-content py-3 position-relative">
+                                    
+                                   
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                    <aside class="col-md-3 bg-light" id="left">
+                        <div class="mt-5 mb-3 sticky-top" id="side">
+                            <ul class="nav flex-md-column flex-row justify-content-between " id="sidenav">
+                                <li class="nav-item"><a href="#sec1" class="nav-link active pl-0">One</a></li>
+                                <li class="nav-item"><a href="#sec2" class="nav-link pl-0">Two</a></li>
+                                <li class="nav-item">
+                                    <a href="#sec3" class="nav-link pl-0">Three</a>
+                                    <ul class="nav flex-md-column ml-2">
+                                        <li class="nav-item"><a href="#sec3a" class="nav-link">Section A</a></li>
+                                        <li class="nav-item"><a href="#sec3b" class="nav-link">Section B</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a href="#sec4" class="nav-link pl-0">Four</a></li>
+                                <li class="nav-item"><a href="#sec5" class="nav-link pl-0">Five</a></li>
+                                <li class="nav-item"><a href="#sec6" class="nav-link pl-0">Six</a></li>
+                            </ul>
+                        </div>
+                    </aside>
+                   
+                </div>
+            </div>
+          
+           
+        
+            
+        </div>
+    </section>
+    <section>
+        <div class="bg-head p-2 w-100">
+
+        </div>
+        <footer class="bg-dark text-white pt-4">
+            <div class="container">
+              <div class="row">
+                <!-- First Column: Logo, App Links, and Social Icons -->
+                <div class="col-md-3 col-sm-6 mb-4">
+                  <img src="your-logo.png" alt="Bikroy Logo" class="img-fluid mb-3">
+                  <p class="mb-2">Download Bikroy App</p>
+                  <img src="your-app-img.png" alt="App Image" class="img-fluid mb-3">
+                  <p>Connect with us</p>
+                  <div class="d-flex">
+                    <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+          
+                <!-- Second Column: More from Bikroy -->
+                <div class="col-md-2 col-sm-6 mb-4">
+                  <h6 class="text-uppercase">More from Bikroy</h6>
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">Sell Fast</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Membership</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Banner Ads</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Ad Promotions</a></li>
+                  </ul>
+                </div>
+          
+                <!-- Third Column: Help & Support -->
+                <div class="col-md-2 col-sm-6 mb-4">
+                  <h6 class="text-uppercase">Help & Support</h6>
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Stay Safe</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+                  </ul>
+                </div>
+          
+                <!-- Fourth Column: About Bikroy -->
+                <div class="col-md-2 col-sm-6 mb-4">
+                  <h6 class="text-uppercase">About Bikroy</h6>
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Careers</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Terms & Conditions</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+                  </ul>
+                </div>
+          
+                <!-- Fifth Column: More Guides -->
+                <div class="col-md-3 col-sm-6 mb-4">
+                  <h6 class="text-uppercase">More Guides</h6>
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">Bikes Guide BD</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Cars Guide BD</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Property Guide BD</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Bottom Section -->
+            <div class="bg-secondary text-center py-3">
+              <small>&copy; 2024 Bikroy. All rights reserved.</small>
+            </div>
+          </footer>
+    </section>
+    
+
+  
+
+    <!-- Bootstrap JS -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome JS -->
+    <script src="./icon/js/all.min.js"></script>
+    <script src="script.js">
+      
+    </script>
+</body>
+</html>

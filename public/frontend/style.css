@@ -1,0 +1,246 @@
+/* Row Custom Styling */
+.row-custom {
+    height: 500px; /* Set fixed height */
+    overflow: hidden; /* Ensure no overflow */
+}
+
+/* Image Styling */
+.big-photo,
+.small-photo1 {
+    object-fit: cover; /* Ensure images fit proportionally */
+    width: 100%; /* Full width */
+}
+
+.big-photo {
+    height: 100%; /* Big photo takes full height */
+}
+
+.small-photo1 {
+    height: 250px; /* Each small photo takes half the height */
+}
+
+/* Section and Card Styling */
+.hero-section {
+    margin-top: 3px; /* Section margin */
+}
+
+.bigc,
+.smallc {
+    overflow: hidden;
+    position: relative; /* For positioning text */
+    height: 100%;
+}
+
+.intro1,
+.intro2 {
+    position: absolute; /* Position text over the image */
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+    transition: all 0.5s ease-in-out; /* Smooth transitions */
+}
+
+/* Large screens: Initially hide paragraphs, reserve space */
+@media (min-width: 992px) { /* For large screens (lg and above) */
+    .intro1 h3,
+    .intro2 h1 {
+        margin-bottom: 0; /* No bottom margin initially */
+    }
+    .intro1 p,
+    .intro2 p {
+        visibility: hidden; /* Paragraphs hidden initially */
+        max-height: 0; /* No space reserved */
+        overflow: hidden; /* Hide overflow */
+        margin: 0;
+    }
+
+    /* Show both h1 and p on hover for large screens */
+    .bigc:hover .intro1 h3,
+    .smallc:hover .intro2 h1 {
+        visibility: visible; /* Show heading on hover */
+    }
+
+    .bigc:hover .intro1 p,
+    .smallc:hover .intro2 p {
+        visibility: visible; /* Show paragraph on hover */
+        max-height: 130px; /* Expand to full height smoothly */
+        transition: max-height 0.5s ease-in-out, visibility 0.5s ease-in-out; /* Smooth transition for height */
+    }
+}
+
+/* Small screens: Display only the heading without hover */
+@media (max-width: 991.98px) { /* For medium and smaller screens */
+    .intro1 h3,
+    .intro2 h3 {
+        visibility: visible; /* Headings always visible */
+        margin-bottom: 29px; /* No extra space */
+        font-size: 15px;
+
+    }
+   
+
+    .intro1 p,
+    .intro2 p {
+        display: none; /* Paragraphs not displayed */
+    }
+}
+
+/* Keep Your Existing Code */
+body {
+    margin: 0; /* Ensure no margin is interfering */
+}
+.navbar {
+    z-index: 1020; /* Ensure it is above other elements */
+}
+.bg-head {
+    background-color: #007168 !important;
+}
+.bg-head2 {
+    background-color: #009877;
+}
+.head-btn {
+    background-color: rgb(199, 199, 55);
+    color: rgb(26, 22, 22);
+}
+.sidebar {
+    position: fixed;
+    right: -250px;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #009877;
+    overflow-x: hidden;
+    transition: right 0.3s;
+    z-index: 1040;
+}
+.sidebar.open {
+    right: 0;
+}
+.closebtn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+}
+.mobile-toggle {
+    display: none;
+}
+
+/* Additional CSS */
+.text-green {
+    color: #007168;
+}
+.text-green2 {
+    color: #009877;
+}
+.text1 { font-size: 10px; }
+.text2 { font-size: 16px; }
+.text3 { font-size: 24px; }
+.text4 { font-size: 30px; }
+.text5 { font-size: 46px; }
+.text6 { font-size: 54px; }
+
+.navbar-nav input::placeholder {
+    color: #ffffff; /* Bright placeholder color */
+    opacity: 1; /* Ensure brightness */
+}
+
+.navbar-nav input:focus {
+    background-color: transparent;
+    border: none;
+    box-shadow: none; /* Remove any shadow */
+    outline: none; /* Remove the outline */
+    color: #ffffff;
+}
+
+.navbar-nav .fa-search {
+    right: 10px;
+}
+
+.navbar-nav .fa-times {
+    right: 30px;
+    cursor: pointer;
+}
+
+.navbar-nav input:focus + .fa-search {
+    display: none;
+}
+
+.navbar-nav input:focus ~ #closeIcon {
+    display: block;
+}
+
+/* Main Row Styling */
+
+/* hero part start */
+
+/* hero part end */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sidebar Link Styles */
+#sidenav .nav-link {
+    color: black;
+    transition: color 0.3s;
+}
+
+#sidenav .nav-link:hover {
+    color: green;
+}
+
+.recent-image{
+    width: 150px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+#side .nav-link.active,
+#side .nav-link:hover,
+#side .nav-link:focus {
+    color: #111;
+    border-bottom: 1px #000 dashed;
+}
+
+#side.sticky-top {
+    top: 100px; /* Adjust this value to control the space from the top */
+}
+
+.custom-dropdown-menu {
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 220px;
+    overflow: hidden;
+    z-index: 1050;
+}
+
+.custom-dropdown-menu .dropdown-item {
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.custom-dropdown-menu .dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.custom-card-dropdown .dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Disable Hover Effects on Small Devices */
+@media (max-width: 768px) {
+    .recent-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        margin-right: 15px;
+    }
+}
