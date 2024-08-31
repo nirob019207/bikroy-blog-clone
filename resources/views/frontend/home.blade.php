@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Sticky Navbar Example</title>
+    <title>bikroy blog clone</title>
     <link rel="stylesheet" href="{{asset('frontend/style.css')}}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">    
